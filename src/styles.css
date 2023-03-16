@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, 
+    "Helvetica Neue", sans-serif; 
+}
+
+/* Tipografía */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+  
+  a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  /* Colores */
+  .primary {
+    color: #658864;
+  }
+
+  .primary-background {
+    background-color: #658864;
+  }
+  
+  .secondary {
+    color: #b7b78a;
+  }
+
+  .secondary-background{
+    background-color:#b7b78a
+  }
+  
+  .tertiary{
+    color: #dddddd;
+  }
+
+  .tertiary-background{
+    background-color:#dddddd
+  }
+
+  .bg {
+    background-color: #f8f9fa;
+  }
+  
+  .text {
+    color: #212529;
+  }
+  
+  a {
+    color: #dddddd;
+  }
+  
