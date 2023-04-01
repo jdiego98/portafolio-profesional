@@ -24,6 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ServiceViewComponent } from './components/service-view/service-view.component';
 import {MatInputModule} from '@angular/material/input';
+import { NgxWhastappButtonModule } from 'ngx-whatsapp-button';
+// import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -54,8 +56,7 @@ import {MatInputModule} from '@angular/material/input';
     ReactiveFormsModule,
     MatDialogModule,
     MatInputModule,
-    
-    
+    NgxWhastappButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
