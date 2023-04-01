@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ServiceViewComponent} from '../service-view/service-view.component';
+
+
 
 @Component({
   selector: 'app-servicios',
@@ -8,14 +12,27 @@ import { Component } from '@angular/core';
 export class ServiciosComponent {
 
   cards = [
-    { title: 'Servicio 1', image: '', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { title: 'Servicio 2', image: '', content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
-    { title: 'Servicio 3', image: '', content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
-    { title: 'Servicio 4', image: '', content: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
-    { title: 'Servicio 5', image: '', content: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' },
-    { title: 'Servicio 6', image: '', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
-    { title: 'Servicio 7', image: '', content: 'Sed do eiusmod tempor incididunt ut labore et dolore'},
-    { title: 'Servicio 8', image: '', content: 'Sed do eiusmod tempor incididunt ut labore et dolore'},
+    { title: 'Desarrollo de software', image: '', content: 'Ofrezco servicios de desarrollo de software para empresas y particulares. Desde la planificación hasta la implementación, puedo ayudarte a crear soluciones personalizadas para tus necesidades específicas.' },
+    { title: 'Desarrollo web', image: '', content: '¿Necesitas una página web para tu empresa o proyecto personal? Ofrezco servicios de desarrollo web, desde el diseño hasta la programación y la puesta en marcha. Con mi experiencia y conocimientos, puedo ayudarte a crear una página web que te represente de manera efectiva en línea.' },
+    { title: 'Ingeniería mecánica', image: '', content: 'Como ingeniero mecánico, puedo ofrecerte servicios de diseño y desarrollo de maquinarias, equipos y sistemas. Desde el análisis y la planificación hasta la construcción y la puesta en marcha, puedo ayudarte a crear soluciones efectivas y eficientes para tu negocio.' },
+    { title: 'Análisis de datos', image: '', content: 'Como experto en tecnología, puedo ofrecerte servicios de consultoría para ayudarte a encontrar soluciones tecnológicas efectivas y eficientes para tu empresa. Desde la selección de software hasta la implementación y el soporte técnico, puedo ayudarte a optimizar tus procesos y maximizar tu eficiencia.' },
+    { title: 'Consultoría en tecnología', image: '', content: 'Como experto en tecnología, puedo ofrecerte servicios de consultoría para ayudarte a encontrar soluciones tecnológicas efectivas y eficientes para tu empresa. Desde la selección de software hasta la implementación y el soporte técnico, puedo ayudarte a optimizar tus procesos y maximizar tu eficiencia.' },
+    { title: 'Capacitación y entrenamiento', image: '', content: 'Si necesitas mejorar tus habilidades técnicas, puedo ofrecerte servicios de capacitación y entrenamiento en diferentes áreas. Desde el desarrollo de software hasta la ingeniería mecánica y el análisis de datos, puedo ayudarte a mejorar tus habilidades y conocimientos para que puedas hacer crecer tu negocio.' },
   ];
 
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(service: any): void {
+    const dialogRef = this.dialog.open(ServiceViewComponent, {
+      data: {title: service.title, content: service.content},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
+
 }
+
+

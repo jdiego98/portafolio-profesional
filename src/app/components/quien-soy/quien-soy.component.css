@@ -1,37 +1,66 @@
-.component-quien-soy{
+.component{
     width: 100%;
-    height: 800px;
+    height: 60vh;
     margin-top: 2%;
+    margin-bottom: 4%;
+    align-items: baseline;
 }
 
+.grid-list {
+    height: 400px;
+  }
+  
+  @media (max-width: 600px) {
+    .grid-list {
+      height: 200px;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 900px) {
+    .grid-list {
+      height: 300px;
+    }
+  }
+
+
+
 .card {
-    width: 100%;
+    max-width: 100%;
+    max-width: 100%;
     height: 90%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .card-img {
-    width: 100%;
+    width: 40%;
     height: 60%;
     display: flex;
     justify-content: center;
-   
+    align-items: flex-start;   
+}
+
+.no-shadow{
+    box-shadow: none !important;
 }
 
 img {
     width: 300px;
     height: 300px;
+    border-radius: 10px;
 }
 
 h1{
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
+    font-size: 42px;
     font-weight: bold;
+    text-align: center;
 }
 
 p{
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .mat-card-content{

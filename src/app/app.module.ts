@@ -21,7 +21,9 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import { ServiceViewComponent } from './components/service-view/service-view.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BlogComponent,
     ContactoComponent,
     FooterComponent,
+    ServiceViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSnackBarModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatInputModule,
     
     
   ],

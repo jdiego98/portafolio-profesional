@@ -10,13 +10,60 @@ h1 {
     margin-top: 2%;
 }
 
-.card{
-    max-width: 60%;
-    min-width: 60%;
-    height: 70%;
-    background-color:#b7b78a;
-}
-
 .encabezado{
     text-align: center;
+}
+
+.card{
+    max-width: 75%;
+    min-width: 75%;
+    height: 75%;
+    /* background-color:#b7b78a; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-list {
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 16px;
+  }
+/* 
+ESTA PARTE RESPONSIVE AUN NO SIRVE, TRATAR QUE LOS CARDS QUEDEN DEL MISMO TAMAÑO, SOLO QUE VAYAN
+PONIENDOSE UNO ABAJO DEL OTRO */
+/* 
+  @media screen and (max-width: 1279px) {
+    mat-grid-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 959px) {
+    mat-grid-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 599px) {
+    mat-grid-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  } */
+ 
+
+.button{
+    /* background-color: #dddddd; */
+  background-color:    #b7b78a;;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: center;
 }

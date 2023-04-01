@@ -1,22 +1,32 @@
 <div class="container">
-    <h2>Contact Us</h2>
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input matInput formControlName="name" placeholder="Enter your name">
-        <!-- <mat-error *ngIf="contactForm.get('name').hasError('required')">Name is required</mat-error> -->
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput formControlName="email" placeholder="Enter your email">
-        <!-- <mat-error *ngIf="contactForm.get('email').hasError('required')">Email is required</mat-error>
-        <mat-error *ngIf="contactForm.get('email').hasError('email')">Invalid email format</mat-error> -->
-      </mat-form-field>
-      <mat-form-field appearance="fill">
-        <mat-label>Message</mat-label>
-        <textarea matInput formControlName="message" placeholder="Enter your message"></textarea>
-        <!-- <mat-error *ngIf="contactForm.get('message').hasError('required')">Message is required</mat-error> -->
-      </mat-form-field>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
-    </form>
-  </div>
+  <h1>Contacto</h1>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" placeholder="Enter your name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput formControlName="name" placeholder="Enter your name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput formControlName="email" placeholder="Enter your email" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Asunto</mat-label>
+      <input matInput formControlName="email" placeholder="Enter your email" />
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="text-box">
+      <mat-label>Mensaje</mat-label>
+      <textarea
+        matInput
+        formControlName="message"
+        placeholder="Enter your message"
+      ></textarea>
+    </mat-form-field>
+    <div class="container-button">
+      <button mat-raised-button class="button" type="submit">Enviar</button>
+    </div>
+  </form>
+</div>
