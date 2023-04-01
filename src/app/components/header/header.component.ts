@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  // constructor(private translateService: TranslateService) {}
+
+  // changeLanguage(): void {
+  //   if (this.translateService.currentLang === 'es') {
+  //     this.translateService.use('en');
+  //   } else {
+  //     this.translateService.use('es');
+  //   }
+  // }
 }

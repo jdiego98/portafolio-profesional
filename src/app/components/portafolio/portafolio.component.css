@@ -1,9 +1,24 @@
-h1 {
+h1{
     font-family: 'Roboto', sans-serif;
-    font-size: 36px;
+    font-size: 3rem;
     font-weight: bold;
-  }
-
+    margin-bottom: 50px;
+    position: relative;
+    animation: slideUp 1s forwards;
+    text-align: center;
+ }
+ 
+ @keyframes slideUp {
+   from {
+     transform: translateY(50px);
+     opacity: 0;
+   }
+   to {
+     transform: translateY(0);
+     opacity: 1;
+   }
+ }
+ 
 .component{
     width: 100%;
     height: 60vh;
@@ -17,7 +32,32 @@ h1 {
     /* background-color:#b7b78a; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 mat-card-actions{
@@ -37,5 +77,14 @@ mat-grid-list{
 
 .button{
     /* background-color: #dddddd; */
-  background-color:    #b7b78a;;
+  background-color: #b7b78a;
+  color: #212529;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+img{
+  height: 60%;
+  width: 100%;
 }
