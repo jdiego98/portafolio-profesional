@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class QuienSoyComponent {
 
+  breakpoint: number | undefined;
+
+  ngOnInit(){
+    this.breakpoint = (window.innerWidth <= 780) ? 1:6;
+    console.log(this.breakpoint)
+  }
+
+  onResize(event: any) {
+    this.breakpoint = (event.target.innerWidth <= 400) ? 1 : 6;
+  }
+
 }

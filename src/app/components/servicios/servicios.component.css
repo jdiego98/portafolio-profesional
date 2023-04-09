@@ -1,54 +1,28 @@
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 50px;
-    position: relative;
-    animation: slideUp 1s forwards;
-  }
-
-  @keyframes slideUp {
-    from {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
+html{
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
 
 .component{
-    width: 100%;
-    height: 95vh;
-    margin-top: 2%;
+  width: 100%;
+  height: 200vh;
+  margin-top: 2%;
+  margin-bottom: 30vh;
 }
 
 .encabezado{
-    text-align: center;
+  text-align: center;
 }
 
-.card{
-    max-width: 75%;
-    min-width: 75%;
-    /* height: 75%; */
-    height: auto;
-    /* background-color:#b7b78a; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    animation: fadeIn 1.5s forwards;
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  animation: slideUp 1s forwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 .card:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
@@ -64,36 +38,6 @@ h1 {
   top: 0;
   width: 100%;
 }
-
-
-.grid-list {
-    height: 800px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 16px;
-  }
-/* 
-ESTA PARTE RESPONSIVE AUN NO SIRVE, TRATAR QUE LOS CARDS QUEDEN DEL MISMO TAMAÑO, SOLO QUE VAYAN
-PONIENDOSE UNO ABAJO DEL OTRO */
-/* 
-  @media screen and (max-width: 1279px) {
-    mat-grid-list {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media screen and (max-width: 959px) {
-    mat-grid-list {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media screen and (max-width: 599px) {
-    mat-grid-list {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  } */
- 
 
 .button{
   background-color: #b7b78a;
@@ -118,3 +62,187 @@ mat-card-title{
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
+
+/* 
+====================================================
+================== ANIMACIONES =====================
+==================================================== */
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 
+====================================================
+================== CLASES GENERALES =====================
+==================================================== */
+
+
+
+/* 
+====================================================
+================== CELULARES =====================
+==================================================== */
+
+@media (max-width: 480px){
+
+  .component{
+    height: 500vh;
+    margin-top: 20vh;
+  }
+
+ .grid-list {
+    height: 500vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.card{
+  width: 90vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 1.5s forwards;
+}
+
+}
+
+
+/* 
+====================================================
+================== TABLETS =====================
+==================================================== */
+
+
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+ 
+  .component{
+    height: 800vh;
+    margin-top: 20vh;
+  }
+
+ .grid-list {
+    height: 700vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+.card{
+  width: 60vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 1.5s forwards;
+}
+
+
+}
+
+
+/* 
+====================================================
+================== LAPTOPS =====================
+==================================================== */
+
+
+/* and (max-width: 1024px) */
+@media only screen and (min-width: 980px)  {
+  
+.card{
+    width: 25vw;
+    height: auto;
+   
+    /* background-color:#b7b78a; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 1.5s forwards;
+}
+
+.grid-list {
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+
+  }
+
+  .component{
+    width: 100%;
+    height: 180vh;
+    margin-top: 2%;
+    margin-bottom: 5vh;
+  }
+
+  .intro{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+
+  .intro p{
+    width: 80%;
+  }
+
+}
+
+
+/* CODIGO VIEJO  */
+
+
+/* 
+ESTA PARTE RESPONSIVE AUN NO SIRVE, TRATAR QUE LOS CARDS QUEDEN DEL MISMO TAMAÑO, SOLO QUE VAYAN
+PONIENDOSE UNO ABAJO DEL OTRO */
+/* 
+  @media screen and (max-width: 1279px) {
+    mat-grid-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 959px) {
+    mat-grid-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 599px) {
+    mat-grid-list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  } */
+ 
+

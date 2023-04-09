@@ -25,7 +25,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ServiceViewComponent } from './components/service-view/service-view.component';
 import {MatInputModule} from '@angular/material/input';
 import { NgxWhastappButtonModule } from 'ngx-whatsapp-button';
-// import { TranslateModule } from '@ngx-translate/core';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatMenuModule} from '@angular/material/menu'
 
 @NgModule({
   declarations: [
@@ -57,6 +58,8 @@ import { NgxWhastappButtonModule } from 'ngx-whatsapp-button';
     MatDialogModule,
     MatInputModule,
     NgxWhastappButtonModule,
+    MatSlideToggleModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

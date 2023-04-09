@@ -5,8 +5,8 @@
 
 .container {
   width: 100%;
-  height: 60vh;
-  margin-top: 2%;
+  height: 100vh;
+  margin-top: 15vh;
 }
 
 h1 {
@@ -31,9 +31,8 @@ h1 {
 }
 
 .card{
-  max-width: 75%;
-  min-width: 75%;
-  height: 75%;
+  width: 80%;
+  height: 60vh;
   /* background-color:#b7b78a; */
   display: flex;
   flex-direction: column;
@@ -67,14 +66,17 @@ width: 100%;
 
 
 .grid-list {
-  height: 40vh;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 16px;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
+
+/* mat-grid-list{
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+} */
 
 .button{
 background-color: #b7b78a;
@@ -100,61 +102,54 @@ mat-card-title{
   margin-bottom: 2rem;
 }
 
+@media (max-width: 480px){
 
-/* .skills-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  .card{
+    width: 40vw;
+    height: 30vh;
+    /* background-color:#b7b78a; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: fadeIn 1.5s forwards;
 }
 
-.skill-card {
-  max-width: 300px;
-  margin: 20px;
-  padding: 20px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  position: relative;
-  animation: fadeIn 1s forwards;
+.grid-list {
+  height: 100vh;
+  display: grid;
+ 
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+}
+
+
+/* 
+====================================================
+================== TABLETS =====================
+==================================================== */
+
+
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+ 
+  .container{
+    height: auto;
+    margin-bottom: 15vh;
   }
-  to {
-    opacity: 1;
+
+  .grid-list {
+    height: 300vh;
+    display: grid;
+   
   }
+
+
+  .card{
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    animation: fadeIn 1.5s forwards;
 }
 
-.skill-card img {
-  width: 80px;
-  margin: 0 auto 20px;
-  display: block;
 }
-
-.skill-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.skill-card p {
-  font-size: 1.1rem;
-  color: #888;
-}
-
-.skill-card:hover {
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-  z-index: 1;
-  transition: all 0.3s ease-in-out;
-}
-
-.skill-card::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-} */

@@ -1,15 +1,271 @@
-.component{
+html{
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 
+====================================================
+================== ANIMACIONES =====================
+==================================================== */
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 
+====================================================
+================== CLASES GENERALES =====================
+==================================================== */
+no-shadow{
+  box-shadow: none !important;
+}
+
+.container{
+  width: 100%;
+}
+
+h1{
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  animation: slideUp 1s forwards;
+  text-align: center;
+  margin-top: 2%;
+}
+
+img{
+  display: block;
+  width: 80%;
+  height: 70%;
+  margin: 5vh auto;
+  margin-bottom: 5vh;
+}
+
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+.button{
+  background-color: #b7b78a;
+  animation: slideUp 1s forwards;
+  animation: fadeIn 1.5s forwards;
+  width: 20%;
+  display: block;
+}
+
+.button a{
+  color: #212529;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* 
+====================================================
+================== CELULARES =====================
+==================================================== */
+
+@media (max-width: 480px){
+
+.container{
+  margin-top: 5vh;
+  margin-bottom: 5vh;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1{
+  margin-top: 1vh;
+}
+
+/* img{
+  display: block;
+  width: 80%;
+  height: 70%;
+  margin: 5vh auto;
+  margin-bottom: 5vh;
+} */
+
+.texto{
+  display: block;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  text-align: center;
+}
+
+p{
+  display: block;
+  margin: 1vh;
+  font-size: 1.2em;
+  animation: slideUp 1s forwards;
+}
+
+.button{
+  width: 30%;
+}
+/* .button{
+  background-color: #b7b78a;
+  animation: slideUp 1s forwards;
+  animation: fadeIn 1.5s forwards;
+}
+
+.button a{
+  color: #212529;
+  font-size: 1rem;
+  text-decoration: none;
+} */
+
+}
+
+
+/* 
+====================================================
+================== TABLETS =====================
+==================================================== */
+
+
+@media only screen and (min-width: 481px) and (max-width: 980px) {
+  
+  .container{
+    margin-top: 5vh;
+    margin-bottom: 5vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img{
+    display: block;
+    width: 40%;
+    height: 30%;
+    margin: 5vh auto;
+    margin-bottom: 5vh;
+    border: 2px solid #ccc;
+  }
+
+  .texto{
+    display: block;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    text-align: center;
+    margin-top: 5vh;
+  }
+
+  p{
+    display: block;
+    margin: 1vh;
+    font-size: 1.3em;
+    animation: slideUp 1s forwards;
+  }
+
+  .button{
+    width: 40vw;
+  }
+
+}
+
+
+/* 
+====================================================
+================== LAPTOPS =====================
+==================================================== */
+
+
+/* and (max-width: 1024px) */
+@media only screen and (min-width: 980px)  {
+  
+  .container{
+    margin-top: 10vh;
+    margin-bottom: 10vh;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1{
+    width: 60%;
+    margin-left: 35%;
+    text-align: left;
+  }
+
+  .contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  img{
+    display: block;
+    width: 350px;
+    height: 350px;
+    margin: 5vh auto;
+    margin-bottom: 5vh;
+    border: 2px solid #ccc;
+  }
+  
+  .texto{
+    display: block;
+    margin: 5vh 5vw;
+    text-align: left;
+    width: 60%;
+    height: 80%;
+    line-height: 80%;
+  }
+  
+  p{
+    line-height: 1.5;
+    font-size: 1.1rem;
+    animation: slideUp 1s forwards;
+  }
+
+  /* .button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 4vh;
+  }
+  
+  .button{
+    background-color: #b7b78a;
+    animation: slideUp 1s forwards;
+    animation: fadeIn 1.5s forwards;
+    width: 20%;
+    display: block;
+  }
+  
+  .button a{
+    color: #212529;
+    font-size: 1rem;
+    text-decoration: none;
+  } */
+
+}
+
+
+/* 
+CODIGO VIEJO */
+
+/* .component{
     width: 100%;
-    height: 60vh;
-    margin-top: 2%;
-    margin-bottom: 4%;
+    height: 70vh;
+    margin-top: 5%;
+    margin-bottom: 20%;
     align-items: baseline;
 }
 
 .grid-list {
-    height: 400px;
-  }
-  
+    height: 55vh;
+  } */
+/*   
   @media (max-width: 600px) {
     .grid-list {
       height: 200px;
@@ -20,13 +276,10 @@
     .grid-list {
       height: 300px;
     }
-  }
-
-
-
+  } */
+/* 
 .card {
-    max-width: 100%;
-    max-width: 100%;
+    width: 100%;
     height: 90%;
     margin: 0 auto;
     display: flex;
@@ -110,3 +363,52 @@ mat-card-actions{
   justify-content: center;
   margin-top: 10vh;
 }
+ */
+
+/* ------------ Cambios Responsives ------------------ */
+
+/* @media (max-width: 480px) { */
+  /* Aquí van las reglas CSS para el estilo que quieres aplicar en celulares */
+
+  /* .component{
+    width: 100%;
+    height: 150vh;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+
+  .grid-list{
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    height: 150vh;
+  }
+
+  mat-grid-list{
+    grid-template-columns: 1fr;
+  } */
+
+  /* mat-grid-tile {
+    width: 100% !important; 
+  } */
+/* 
+  .card-img {
+      width: 100%;
+      height: 35vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;   
+  }
+
+  .card {
+    max-width: 100%;
+    max-width: 100%;
+    height: 115vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+/* 
+
+} */

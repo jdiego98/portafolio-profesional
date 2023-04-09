@@ -7,13 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  // constructor(private translateService: TranslateService) {}
+  isSpanish: boolean = false;
+  dispositivos: boolean = false;
+  breakpoint:number | undefined; 
+  
+  constructor() {
+  }
 
-  // changeLanguage(): void {
-  //   if (this.translateService.currentLang === 'es') {
-  //     this.translateService.use('en');
-  //   } else {
-  //     this.translateService.use('es');
-  //   }
-  // }
+  ngOnInit(){
+  this.dispositivos = (window.innerWidth <= 820) ? true:false;
+    console.log(this.dispositivos)
+  }
+
+  toggleLanguage(): void {
+    this.isSpanish = !this.isSpanish;
+  }
 }

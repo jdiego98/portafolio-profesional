@@ -1,19 +1,24 @@
+html{
+    font-size: 18px;
+}
+
 .container{
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: auto;
 }
 
 app-quien-soy{
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 }
 
 app-servicio{
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 }
 
 app-portafolio{
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 }
 
     

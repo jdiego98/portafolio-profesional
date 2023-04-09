@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ServiceViewComponent} from '../service-view/service-view.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 
 
@@ -16,11 +17,30 @@ export class ServiciosComponent {
     { title: 'Desarrollo web', image: '', content: '¿Necesitas una página web para tu empresa o proyecto personal? Ofrezco servicios de desarrollo web, desde el diseño hasta la programación y la puesta en marcha. Con mi experiencia y conocimientos, puedo ayudarte a crear una página web que te represente de manera efectiva en línea.' },
     { title: 'Ingeniería mecánica', image: '', content: 'Como ingeniero mecánico, puedo ofrecerte servicios de diseño y desarrollo de maquinarias, equipos y sistemas. Desde el análisis y la planificación hasta la construcción y la puesta en marcha, puedo ayudarte a crear soluciones efectivas y eficientes para tu negocio.' },
     { title: 'Análisis de datos', image: '', content: 'Como experto en tecnología, puedo ofrecerte servicios de consultoría para ayudarte a encontrar soluciones tecnológicas efectivas y eficientes para tu empresa. Desde la selección de software hasta la implementación y el soporte técnico, puedo ayudarte a optimizar tus procesos y maximizar tu eficiencia.' },
-    { title: 'Consultoría en tecnología', image: '', content: 'Como experto en tecnología, puedo ofrecerte servicios de consultoría para ayudarte a encontrar soluciones tecnológicas efectivas y eficientes para tu empresa. Desde la selección de software hasta la implementación y el soporte técnico, puedo ayudarte a optimizar tus procesos y maximizar tu eficiencia.' },
-    { title: 'Capacitación y entrenamiento', image: '', content: 'Si necesitas mejorar tus habilidades técnicas, puedo ofrecerte servicios de capacitación y entrenamiento en diferentes áreas. Desde el desarrollo de software hasta la ingeniería mecánica y el análisis de datos, puedo ayudarte a mejorar tus habilidades y conocimientos para que puedas hacer crecer tu negocio.' },
+    { title: 'Consultoría', image: '', content: 'Como experto en tecnología, puedo ofrecerte servicios de consultoría para ayudarte a encontrar soluciones tecnológicas efectivas y eficientes para tu empresa. Desde la selección de software hasta la implementación y el soporte técnico, puedo ayudarte a optimizar tus procesos y maximizar tu eficiencia.' },
+    { title: 'Capacitaciones', image: '', content: 'Si necesitas mejorar tus habilidades técnicas, puedo ofrecerte servicios de capacitación y entrenamiento en diferentes áreas. Desde el desarrollo de software hasta la ingeniería mecánica y el análisis de datos, puedo ayudarte a mejorar tus habilidades y conocimientos para que puedas hacer crecer tu negocio.' },
   ];
+  
+  public isMobile: boolean = false;
+  public colSize: number = 3;
 
-  constructor(public dialog: MatDialog) {}
+
+  constructor(public dialog: MatDialog, breakpoinObserver: BreakpointObserver) {
+
+    // breakpoinObserver.observe([Breakpoints.Handset]).subscribe(res =>{
+
+    breakpoinObserver.observe(['(max-width: 980px)']).subscribe(res =>{
+        console.log(res.matches)
+        this.isMobile = res.matches
+        if(this.isMobile){
+          this.colSize = 1;          
+        }else{
+          this.colSize = 3;         
+        }
+      })
+
+    
+  }
 
   openDialog(service: any): void {
     const dialogRef = this.dialog.open(ServiceViewComponent, {

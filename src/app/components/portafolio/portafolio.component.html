@@ -1,21 +1,26 @@
 <div class="component">
-    <div class="encabezado">
-      <h1>Portafolio</h1>
-    </div>
-      <mat-grid-list cols="4">
-        <mat-grid-tile *ngFor="let item of cards">
-            <mat-card class="card">
-              <mat-card-header>
-                <mat-card-title>{{ item.title }}</mat-card-title>
-              </mat-card-header>
-              <img mat-card-image src="{{ item.image }}">
-              <!-- <mat-card-content>
+  <div class="encabezado">
+    <h1>Portafolio</h1>
+  </div>
+  <div class="intro">
+    <p>
+      Si estás buscando conocer más sobre mi experiencia y habilidades en ingeniería mecánica e ingeniería de software, estás en el lugar correcto. A continuación, te presento mi portafolio de trabajos, donde podrás ver algunos de los proyectos en los que he trabajado. Desde el desarrollo de software y sitios web hasta la ingeniería mecánica y el análisis de datos, cada proyecto muestra mi habilidad para trabajar en diferentes ámbitos y entregar soluciones de alta calidad. Mi portafolio demuestra mi capacidad para trabajar de manera efectiva en equipo, y cómo mi enfoque en la calidad, la eficiencia y la innovación me ha permitido brindar soluciones personalizadas a mis clientes.
+    </p>
+  </div>
+  <mat-grid-list [cols]="colSize">
+    <mat-grid-tile *ngFor="let item of cards">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{ item.image }}" />
+        <!-- <mat-card-content>
                 <p>{{ item.content }}</p>
               </mat-card-content> -->
-              <!-- <mat-card-actions>
+        <!-- <mat-card-actions>
                 <button mat-button class="button">Ver Más</button>
               </mat-card-actions> -->
-            </mat-card>
-          </mat-grid-tile>
-        </mat-grid-list>
-  </div>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

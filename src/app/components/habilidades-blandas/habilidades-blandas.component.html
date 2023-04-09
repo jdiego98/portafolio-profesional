@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="title">Habilidades Blandas</h1>
-  <mat-grid-list cols="3" rowHeight="fit" class="grid-list">
+  <mat-grid-list [cols]="colSize" rowHeight="fit" class="grid-list">
     <mat-grid-tile *ngFor="let item of cards">
       <mat-card class="card">
         <div>
