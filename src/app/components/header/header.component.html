@@ -1,24 +1,22 @@
-<div class="header">
+<header>
   <mat-toolbar class="mat-tool primary-background">
     <div>
-      <!-- <button mat-button><a routerLink="/">LOGO</a></button> -->
-
-      <img
+       <img
         src="https://res.cloudinary.com/dmdpbza13/image/upload/v1681004964/Portafolio%20Profesional/Logo_JDA_y7g3lz.png"
         alt="Logo de la empresa"
         class="logo"
       />
     </div>
     <div class="menu-desktop">
-      <button mat-button><a routerLink="/">Inicio</a></button>
-      <button mat-button><a routerLink="/quien-soy">Quién soy</a></button>
+      <button mat-button><a routerLink="/">{{textos[currentLanguage].inicio}}</a></button>
+      <button mat-button><a routerLink="/quien-soy">{{textos[currentLanguage].quienSoy}}</a></button>
       <button mat-button>
-        <a routerLink="/habilidades-blandas">Habilidades</a>
+        <a routerLink="/habilidades-blandas">{{textos[currentLanguage].habilidades}}</a>
       </button>
-      <button mat-button><a routerLink="/servicios">Servicios</a></button>
-      <button mat-button><a routerLink="/portafolio">Portafolio</a></button>
-      <button mat-button><a routerLink="/contacto">Contacto</a></button>
-      <mat-slide-toggle [checked]="isSpanish" (change)="toggleLanguage()"
+      <button mat-button><a routerLink="/servicios">{{textos[currentLanguage].servicios}}</a></button>
+      <button mat-button><a routerLink="/portafolio">{{textos[currentLanguage].portafolio}}</a></button>
+      <button mat-button><a routerLink="/contacto">{{textos[currentLanguage].contacto}}</a></button>
+      <mat-slide-toggle (change)="toggleLanguage()"
         >English</mat-slide-toggle
       >
     </div>
@@ -29,24 +27,24 @@
     </div>
     <mat-menu #menu="matMenu" class="menu">
       <button mat-menu-item class="button-celphone">
-        <a href="/">Inicio</a>
+        <a href="/">{{textos[currentLanguage].inicio}}</a>
       </button>
       <button mat-menu-item class="button-celphone">
-        <a href="/quien-soy">Quién soy</a>
+        <a href="/quien-soy">{{textos[currentLanguage].quienSoy}}</a>
       </button>
       <button mat-menu-item class="button-celphone">
-        <a href="/habilidades-blandas">Habilidades</a>
+        <a href="/habilidades-blandas">{{textos[currentLanguage].habilidades}}</a>
       </button>
       <button mat-menu-item class="button-celphone">
-        <a href="/servicios">Servicios</a>
+        <a href="/servicios">{{textos[currentLanguage].servicios}}</a>
       </button>
       <button mat-menu-item class="button-celphone">
-        <a href="/portafolio">Portafolio</a>
+        <a href="/portafolio">{{textos[currentLanguage].portafolio}}</a>
       </button>
       <button mat-menu-item class="button-celphone">
-        <a href="/contacto">Contacto</a>
+        <a href="/contacto">{{textos[currentLanguage].contacto}}</a>
       </button>
 
     </mat-menu>
   </mat-toolbar>
-</div>
+</header>

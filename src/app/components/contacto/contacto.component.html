@@ -1,24 +1,24 @@
 <div class="container">
-  <h1>Contacto</h1>
+  <h1>{{textos[currentLanguage].titulo}}</h1>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="fill">
-      <mat-label>Nombre</mat-label>
+      <mat-label>{{textos[currentLanguage].nombre}}</mat-label>
       <input matInput formControlName="name" placeholder="Enter your name" />
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label>Apellido</mat-label>
+      <mat-label>{{textos[currentLanguage].apellido}}</mat-label>
       <input matInput formControlName="name" placeholder="Enter your name" />
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label>Correo Electrónico</mat-label>
+      <mat-label>{{textos[currentLanguage].email}}</mat-label>
       <input matInput formControlName="email" placeholder="Enter your email" />
     </mat-form-field>
     <mat-form-field appearance="fill">
-      <mat-label>Asunto</mat-label>
+      <mat-label>{{textos[currentLanguage].asunto}}</mat-label>
       <input matInput formControlName="email" placeholder="Enter your email" />
     </mat-form-field>
     <mat-form-field appearance="fill" class="text-box">
-      <mat-label>Mensaje</mat-label>
+      <mat-label>{{textos[currentLanguage].mensaje}}</mat-label>
       <textarea
         matInput
         formControlName="message"
@@ -26,7 +26,7 @@
       ></textarea>
     </mat-form-field>
     <div class="container-button">
-      <button mat-raised-button class="button" type="submit">Enviar</button>
+      <button mat-raised-button class="button" type="submit">{{textos[currentLanguage].button}}</button>
     </div>
   </form>
 </div>

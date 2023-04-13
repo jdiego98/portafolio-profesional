@@ -29,6 +29,9 @@ no-shadow{
 
 .container{
   width: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  height: auto;
 }
 
 h1{
@@ -76,25 +79,9 @@ img{
 
 @media (max-width: 480px){
 
-.container{
-  margin-top: 5vh;
-  margin-bottom: 5vh;  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 h1{
   margin-top: 1vh;
 }
-
-/* img{
-  display: block;
-  width: 80%;
-  height: 70%;
-  margin: 5vh auto;
-  margin-bottom: 5vh;
-} */
 
 .texto{
   display: block;
@@ -107,23 +94,12 @@ p{
   display: block;
   margin: 1vh;
   font-size: 1.2em;
-  animation: slideUp 1s forwards;
+  /* animation: slideUp 1s forwards; */
 }
 
 .button{
-  width: 30%;
+  width: 200px;
 }
-/* .button{
-  background-color: #b7b78a;
-  animation: slideUp 1s forwards;
-  animation: fadeIn 1.5s forwards;
-}
-
-.button a{
-  color: #212529;
-  font-size: 1rem;
-  text-decoration: none;
-} */
 
 }
 
@@ -135,20 +111,12 @@ p{
 
 
 @media only screen and (min-width: 481px) and (max-width: 980px) {
-  
-  .container{
-    margin-top: 5vh;
-    margin-bottom: 5vh;  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 
   img{
     display: block;
-    width: 40%;
-    height: 30%;
-    margin: 5vh auto;
+    width: 200px;
+    height: 200px;
+    margin: auto auto;
     margin-bottom: 5vh;
     border: 2px solid #ccc;
   }
@@ -169,7 +137,7 @@ p{
   }
 
   .button{
-    width: 40vw;
+    width: 200px;
   }
 
 }
@@ -181,16 +149,8 @@ p{
 ==================================================== */
 
 
-/* and (max-width: 1024px) */
 @media only screen and (min-width: 980px)  {
   
-  .container{
-    margin-top: 10vh;
-    margin-bottom: 10vh;  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 
   h1{
     width: 60%;
@@ -206,8 +166,8 @@ p{
   
   img{
     display: block;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin: 5vh auto;
     margin-bottom: 5vh;
     border: 2px solid #ccc;
@@ -225,190 +185,6 @@ p{
   p{
     line-height: 1.5;
     font-size: 1.1rem;
-    animation: slideUp 1s forwards;
-  }
-
-  /* .button-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 4vh;
-  }
-  
-  .button{
-    background-color: #b7b78a;
-    animation: slideUp 1s forwards;
-    animation: fadeIn 1.5s forwards;
-    width: 20%;
-    display: block;
-  }
-  
-  .button a{
-    color: #212529;
-    font-size: 1rem;
-    text-decoration: none;
-  } */
-
-}
-
-
-/* 
-CODIGO VIEJO */
-
-/* .component{
-    width: 100%;
-    height: 70vh;
-    margin-top: 5%;
-    margin-bottom: 20%;
-    align-items: baseline;
-}
-
-.grid-list {
-    height: 55vh;
-  } */
-/*   
-  @media (max-width: 600px) {
-    .grid-list {
-      height: 200px;
-    }
-  }
-  
-  @media (min-width: 601px) and (max-width: 900px) {
-    .grid-list {
-      height: 300px;
-    }
-  } */
-/* 
-.card {
-    width: 100%;
-    height: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.card-img {
-    width: 40%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;   
-}
-
-.no-shadow{
-    box-shadow: none !important;
-}
-
-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-    animation: slideUp 1s forwards;
-}
-
-h1{
-   font-family: 'Roboto', sans-serif;
-   font-size: 3rem;
-   font-weight: bold;
-   margin-bottom: 50px;
-   position: relative;
-   animation: slideUp 1s forwards;
-   text-align: center;
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
-p{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    animation: slideUp 1s forwards;
-}
-
-.mat-card-content{
-    display: flex;
-    justify-content: center;
-}
-
-mat-card-header{
-      margin-bottom: 2%;
-}
-
-.button{
-  background-color: #b7b78a;
-  color: #212529;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  text-decoration: none;
-  animation: slideUp 1s forwards;
-}
-
-a{
-  color: #212529;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-mat-card-actions{
-  display: flex;
-  justify-content: center;
-  margin-top: 10vh;
-}
- */
-
-/* ------------ Cambios Responsives ------------------ */
-
-/* @media (max-width: 480px) { */
-  /* Aquí van las reglas CSS para el estilo que quieres aplicar en celulares */
-
-  /* .component{
-    width: 100%;
-    height: 150vh;
-    margin-top: 5%;
-    margin-bottom: 20%;
-}
-
-  .grid-list{
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
-    height: 150vh;
-  }
-
-  mat-grid-list{
-    grid-template-columns: 1fr;
-  } */
-
-  /* mat-grid-tile {
-    width: 100% !important; 
-  } */
-/* 
-  .card-img {
-      width: 100%;
-      height: 35vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;   
-  }
-
-  .card {
-    max-width: 100%;
-    max-width: 100%;
-    height: 115vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
-/* 
-
-} */

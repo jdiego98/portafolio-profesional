@@ -1,7 +1,7 @@
 <div class="container">
-  <h1 class="title">Habilidades Blandas</h1>
+  <h1 class="title">{{textos[currentLanguage].titulo}}</h1>
   <mat-grid-list [cols]="colSize" rowHeight="fit" class="grid-list">
-    <mat-grid-tile *ngFor="let item of cards">
+    <mat-grid-tile *ngFor="let item of cards[currentLanguage]">
       <mat-card class="card">
         <div>
           <mat-card-header>

@@ -1,45 +1,42 @@
 <mat-toolbar class="footer tertiary-background">
   <div class="contacto">
-    <h2>Contacto</h2>
+    <h2>{{textos[currentLanguage].contacto.titulo}}</h2>
     <ul>
       <li>Tel: +506 8682-7269</li>
       <li>Email: jdiegoquan@gmail.com</li>
-      <li>Direccion: Alajuela, Costa Rica</li>
+      <li>{{textos[currentLanguage].contacto.direccion}}: Alajuela, Costa Rica</li>
     </ul>
   </div>
   <div class="enlaces">
-    <h2>Enlaces</h2>
+    <h2>{{textos[currentLanguage].enlaces.titulo}}</h2>
     <div class="container-enalces">
       <ul>
         <li>
-          <a routerLink="/">Inicio</a>
+          <a routerLink="/">{{textos[currentLanguage].enlaces.inicio}}</a>
         </li>
         <li>
-          <a routerLink="/quien-soy">Quién soy</a>
+          <a routerLink="/quien-soy">{{textos[currentLanguage].enlaces.quienSoy}}</a>
         </li>
         <li>
-          <a routerLink="/habilidades-blandas">Habilidades</a>
+          <a routerLink="/habilidades-blandas">{{textos[currentLanguage].enlaces.habilidades}}</a>
         </li>
-      </ul>
-      <ul>
+      </ul>      
+      <ul> 
         <li>
-          <a routerLink="/portafolio">Portafolio</a>
-        </li>
-        <!-- <li>
-          <a routerLink="/blog">Blog</a>
-        </li> -->
-        <li>
-          <a routerLink="/contacto">Contacto</a>
+          <a routerLink="/servicios">{{textos[currentLanguage].enlaces.servicios}}</a>
         </li>
         <li>
-          <a routerLink="/servicios">Servicios</a>
-        </li>
+         <a routerLink="/portafolio">{{textos[currentLanguage].enlaces.portafolio}}</a>
+       </li>
+        <li>
+          <a routerLink="/contacto">{{textos[currentLanguage].enlaces.contacto}}</a>
+        </li>        
       </ul>
     </div>
   </div>
   <div class="redes">
     <div>
-      <h2>Redes Sociales</h2>
+      <h2>{{textos[currentLanguage].redes.titulo}}</h2>
     </div>
     <div class="redes-redes">
       <a href="https://twitter.com/jdiegooo">
@@ -57,12 +54,12 @@
     </div>
 
     <div class="contacto-mobile">
-      <h2>Contacto</h2>
-      <ul>
-        <li>Tel: +506 8682-7269</li>
-        <li>Email: jdiegoquan@gmail.com</li>
-        <li>Direccion: Alajuela, Costa Rica</li>
-      </ul>
+      <h2>{{textos[currentLanguage].contacto.titulo}}</h2>
+    <ul>
+      <li>Tel: +506 8682-7269</li>
+      <li>Email: jdiegoquan@gmail.com</li>
+      <li>{{textos[currentLanguage].contacto.titulo}}: Alajuela, Costa Rica</li>
+    </ul>
     </div>
   </div>
 </mat-toolbar>

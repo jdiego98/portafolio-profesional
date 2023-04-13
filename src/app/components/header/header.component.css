@@ -3,16 +3,21 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 
+
 .mat-tool{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 20vh;
+    height: 150px;
 }
 
 .logo{
     width: 30vh;
     height: 100%;
+}
+
+mat-slide-toggle{
+    margin-left: 15px;
 }
 
 @media (max-width: 980px){
