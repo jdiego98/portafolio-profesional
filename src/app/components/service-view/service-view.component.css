@@ -1,19 +1,23 @@
 mat-card{
-    /* height: 400px;
-    width: 600px; */
-    height: auto;
-    width: 800px;
-    height: 500px;
-    background-color: #dddddd;
+    width: 500px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-mat-card-title{
-    font-size: 24px;
+mat-card-header{
     display: flex;
     justify-content: center;
+
+}
+
+mat-card-title{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 img{
@@ -23,9 +27,33 @@ img{
 
 p{
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    text-align: justify;
+
+}
+
+mat-card-actions{
+    display: flex;
+    justify-content: right;
 }
 
 .button{
-    background-color: red;
+    background-color: #a34a4a;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+
+@media (max-width: 600px){
+
+    mat-card{
+        width: 320px;
+        height: 530px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+  
 }

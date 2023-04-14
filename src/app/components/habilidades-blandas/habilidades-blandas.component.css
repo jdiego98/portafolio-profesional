@@ -5,6 +5,17 @@
   margin-bottom: 50px;
 }
 
+.encabezado{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img{
+  width: 60px;
+  height: 50px;
+}
+
 h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 3rem;
@@ -23,8 +34,8 @@ h1 {
 } 
 
 .card{
-  width: 350px;
-  height: 370px;
+  width: 370px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,6 +58,12 @@ h1 {
   width: 100%;
 }
 
+mat-card-header{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
 mat-card-title{
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -54,6 +71,8 @@ mat-card-title{
 
 p{
   font-size: 1.1rem;
+  line-height: 1.5;
+
 }
 
 @keyframes slideUp {
@@ -79,7 +98,7 @@ p{
 @media  (max-width: 980px) {
 
   .grid-list{
-    height: 1000px;
+    height: 1300px;
   }
 
   h1{
